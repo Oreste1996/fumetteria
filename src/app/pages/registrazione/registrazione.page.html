@@ -1,9 +1,64 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>registrazione</ion-title>
-  </ion-toolbar>
+
 </ion-header>
 
-<ion-content>
+<ion-content style="--background: black;" >
 
+  <form class="centra" style="text-align: center; height: 100%; width: 50%; " >
+
+    <div class="ion-text-center">
+      <img src="assets/logo_devskill@3x.png">
+    </div>
+
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <h1>Pagina di registrazione</h1>
+      </ion-col>
+    </ion-row>
+
+    <ion-grid >
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label for="nome" position="floating">Nome</ion-label>
+            <ion-input id="nome" name="nome"></ion-input>
+            <ion-icon name="person" slot="end"></ion-icon>
+          </ion-item>
+        </ion-col>
+
+        <ion-col>
+          <ion-item>
+            <ion-label for="cognome" position="floating">Cognome</ion-label>
+            <ion-input id="cognome" name="cognome"></ion-input>
+            <ion-icon name="person" slot="end"></ion-icon>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label for="e-mail" position="floating">E-mail</ion-label>
+            <ion-input id="e-mail" name="e-mail"></ion-input>
+            <ion-icon name="mail" slot="end"></ion-icon>
+          </ion-item>
+        </ion-col>
+
+        <ion-col>
+          <ion-item>
+            <ion-label for="password" position="floating">Password</ion-label>
+            <ion-input id="pass" name="pass" type="password"></ion-input>
+            <ion-icon name="lock-closed" slot="end"></ion-icon>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <ion-button color="dark">Registrati</ion-button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </form>
 </ion-content>
