@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
+titolo:string="Benvenuti nella pagina di Login";
+
+username:string;
+
+password:string;
+
+clicca(){
+  alert(this.username +" "+ this.password);
+}
+
   constructor() { }
 
   ngOnInit() {

@@ -1,0 +1,54 @@
+<ion-content>
+  <ion-grid style="padding:10px">
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-label>Temperatura</ion-label>
+        </div>
+        <ion-col>
+
+        </ion-col>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Centigradi</ion-label>
+              <ion-input  [(ngModel)]="c" (change)="convertitore('c')"  type="number"></ion-input>
+            </ion-item>
+          </ion-col>
+
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">fahrenheit</ion-label>
+              <ion-input  [(ngModel)]="f" (change)="convertitore('f')" type="number"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-label>Distanza</ion-label>
+        </div>
+        <ion-col>
+
+        </ion-col>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Km</ion-label>
+              <ion-input type="number" [(ngModel)]="km" (change)="convertitore('km')"></ion-input>
+            </ion-item>
+          </ion-col>
+
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Mi</ion-label>
+              <ion-input type="number" [(ngModel)]="mi" (change)="convertitore('mi')"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-grid>
+</ion-content>

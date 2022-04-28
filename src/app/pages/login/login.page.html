@@ -23,7 +23,7 @@
         <ion-col>
           <ion-item>
             <ion-label for="uname" position="floating">Username</ion-label>
-            <ion-input id="uname" name="uname"></ion-input>
+            <ion-input [(ngModel)]="username" id="uname" name="uname"></ion-input>
             <ion-icon slot="end" name="mail-sharp"></ion-icon>
           </ion-item>
           <h6 style="font-size: small;">Inserisci username</h6>
@@ -36,14 +36,16 @@
         <ion-col>
           <ion-item>
             <ion-label for="pass" position="floating">Password</ion-label>
-            <ion-input id="pass" name="pass" type="password"></ion-input>
+            <ion-input [(ngModel)]="password" id="pass" name="pass" type="password"></ion-input>
             <ion-icon slot="end" name="lock-open"></ion-icon>
           </ion-item>
           <h6 style="font-size: small;">Inserisci password</h6>
 
-
+          <div class="ion-float-left">
+            <a href="http://localhost:8100/registrazione"> Registrati </a>
+          </div>
           <div class="ion-float-right">
-            <ion-button>Login</ion-button>
+            <ion-button (click)="clicca()">Login</ion-button>
           </div>
 
         </ion-col>
