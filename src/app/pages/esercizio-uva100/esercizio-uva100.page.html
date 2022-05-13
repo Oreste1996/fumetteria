@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center">
+    <ion-title>esercizioUva100</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col >
+        <ion-item >
+          <ion-label position="fixed">Input1</ion-label>
+          <ion-input id="input1" [(ngModel)]="input1" ></ion-input>
+          </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item >
+          <ion-label position="fixed">Input2</ion-label>
+          <ion-input id="input2" [(ngModel)]="input2" ></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label position="fixed">Max</ion-label>
+          <ion-input id="max"  (change)="calcolatore('max')" ></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

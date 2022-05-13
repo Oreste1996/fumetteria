@@ -4,24 +4,22 @@
 
 <ion-content style="--background: black;" >
 
-  <form class="centra" style="text-align: center; height: 100%; width: 50%; " >
+  <form class="centra" style="text-align: center; height: 100%; width: 50%; " [formGroup]="mioForm">
 
-    <div class="ion-text-center">
-      <img src="assets/logo_devskill@3x.png">
-    </div>
+  
 
     <ion-row>
-      <ion-col class="ion-text-center">
-        <h1>Pagina di registrazione</h1>
+      <ion-col class="ion-text-center" style="padding-top: 50px;">
+       <app-titolo-devskill></app-titolo-devskill>
       </ion-col>
     </ion-row>
 
-    <ion-grid >
+    <ion-grid style="padding: 50px;">
       <ion-row>
         <ion-col>
           <ion-item>
             <ion-label for="nome" position="floating">Nome</ion-label>
-            <ion-input id="nome" name="nome"></ion-input>
+            <ion-input id="nome" name="nome" (keyup)="controllo()" formControlName="name"></ion-input>
             <ion-icon name="person" slot="end"></ion-icon>
           </ion-item>
         </ion-col>
@@ -29,7 +27,7 @@
         <ion-col>
           <ion-item>
             <ion-label for="cognome" position="floating">Cognome</ion-label>
-            <ion-input id="cognome" name="cognome"></ion-input>
+            <ion-input id="cognome" name="cognome" (keyup)="controllo()" formControlName="surname"></ion-input>
             <ion-icon name="person" slot="end"></ion-icon>
           </ion-item>
         </ion-col>
@@ -39,7 +37,7 @@
         <ion-col>
           <ion-item>
             <ion-label for="e-mail" position="floating">E-mail</ion-label>
-            <ion-input id="e-mail" name="e-mail"></ion-input>
+            <ion-input id="e-mail" name="e-mail" (keyup)="controllo()" formControlName="email"></ion-input>
             <ion-icon name="mail" slot="end"></ion-icon>
           </ion-item>
         </ion-col>
@@ -47,15 +45,16 @@
         <ion-col>
           <ion-item>
             <ion-label for="password" position="floating">Password</ion-label>
-            <ion-input id="pass" name="pass" type="password"></ion-input>
+            <ion-input id="pass" name="pass" type="password" (keyup)="controllo()" formControlName="password"></ion-input>
             <ion-icon name="lock-closed" slot="end"></ion-icon>
           </ion-item>
         </ion-col>
       </ion-row>
 
       <ion-row>
-        <ion-col class="ion-text-center">
-          <ion-button  color="dark">Registrati</ion-button>
+        <ion-col class="ion-text-center" style="padding:50px">
+          <ion-button type="submit" [disable]="disattiva" (click)="clicca()" color="dark">Registrati</ion-button>
+          <app-bottone-personalizzato indirizzo="/login" testo="vai alla pagina di login"></app-bottone-personalizzato>
         </ion-col>
       </ion-row>
 
